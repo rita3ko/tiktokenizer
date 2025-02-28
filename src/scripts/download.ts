@@ -35,7 +35,8 @@ async function download() {
       );
 
       if (!res.ok) {
-        throw new Error(`Failed to fetch ${file} for ${modelName}`);
+        console.log(`skipping ${modelName}`)
+        // throw new Error(`Failed to fetch ${file} for ${modelName}`);
       }
 
       await fs.mkdir(targetDir, { recursive: true });
